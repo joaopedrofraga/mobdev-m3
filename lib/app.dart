@@ -15,7 +15,10 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(textTheme: GoogleFonts.bricolageGrotesqueTextTheme()),
+      theme: ThemeData(
+        textTheme: GoogleFonts.bricolageGrotesqueTextTheme(),
+        colorSchemeSeed: AppColors.primaryColor,
+      ),
       home: Scaffold(
         backgroundColor: AppColors.backgroundColor,
         appBar: AppBar(
@@ -23,9 +26,19 @@ class _AppState extends State<App> {
           centerTitle: true,
           backgroundColor: AppColors.primaryColor,
         ),
-        body: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [TextFormFieldWidget(controller: TextEditingController())],
+        body: Padding(
+          padding: const EdgeInsets.all(18),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              TextFormFieldWidget(
+                controller: TextEditingController(),
+                label: 'Detalhes do Avistamento',
+                hintText: 'Ex: Peixe Tilápia, Garrafa de Plástico, etc.',
+                preffixIcon: Icon(Icons.description, color: Colors.yellow),
+              ),
+            ],
+          ),
         ),
       ),
     );
