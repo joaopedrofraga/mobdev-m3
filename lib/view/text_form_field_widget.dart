@@ -6,7 +6,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final TextEditingController controller;
   final String label;
   final String? hintText;
-  final Icon? preffixIcon;
+  final Widget? preffixIcon;
   final int? maxLines;
 
   const TextFormFieldWidget({
