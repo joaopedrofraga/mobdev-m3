@@ -7,6 +7,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final String label;
   final String? hintText;
   final Icon? preffixIcon;
+  final int? maxLines;
 
   const TextFormFieldWidget({
     super.key,
@@ -14,6 +15,7 @@ class TextFormFieldWidget extends StatelessWidget {
     required this.label,
     this.hintText,
     this.preffixIcon,
+    this.maxLines,
   });
 
   @override
@@ -21,6 +23,7 @@ class TextFormFieldWidget extends StatelessWidget {
     return TextFormField(
       controller: controller,
       cursorColor: AppColors.whiteColor,
+      maxLines: maxLines,
       style: TextStyle(color: AppColors.whiteColor),
       decoration: InputDecoration(
         label: TextWidget.normal(label),
@@ -29,7 +32,7 @@ class TextFormFieldWidget extends StatelessWidget {
         hintText: ' $hintText',
         hintStyle: TextStyle(
           fontSize: 14,
-          color: const Color.fromARGB(43, 255, 255, 255),
+          color: const Color.fromARGB(71, 255, 255, 255),
         ),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(5)),
       ),

@@ -28,16 +28,56 @@ class _AppState extends State<App> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(18),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextFormFieldWidget(
-                controller: TextEditingController(),
-                label: 'Detalhes do Avistamento',
-                hintText: 'Ex: Peixe Tilápia, Garrafa de Plástico, etc.',
-                preffixIcon: Icon(Icons.description, color: Colors.yellow),
-              ),
-            ],
+          child: Center(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextFormFieldWidget(
+                  controller: TextEditingController(),
+                  label: 'Tipo de Avistamento',
+                  hintText: 'Animal ou Plástico',
+                  preffixIcon: Icon(Icons.pentagon, color: Colors.blue),
+                ),
+                const SizedBox(height: 15),
+                TextFormFieldWidget(
+                  controller: TextEditingController(),
+                  label: 'Detalhes do Avistamento',
+                  hintText: 'Ex: Peixe Tilápia, Garrafa de Plástico, etc.',
+                  preffixIcon: Icon(
+                    Icons.add_photo_alternate_rounded,
+                    color: Colors.red,
+                  ),
+                ),
+                const SizedBox(height: 15),
+                TextFormFieldWidget(
+                  controller: TextEditingController(),
+                  label: 'Localização',
+                  hintText: 'Insira a localização.',
+                  preffixIcon: Icon(
+                    Icons.location_on_sharp,
+                    color: Colors.green,
+                  ),
+                ),
+                const SizedBox(height: 15),
+                TextFormFieldWidget(
+                  controller: TextEditingController(),
+                  label: 'Data/Hora',
+                  hintText: 'Insira a data e o horário do avistamento.',
+                  preffixIcon: Icon(
+                    Icons.calendar_month,
+                    color: Colors.pinkAccent,
+                  ),
+                ),
+                const SizedBox(height: 15),
+                TextFormFieldWidget(
+                  controller: TextEditingController(),
+                  label: 'Observações',
+                  hintText: 'Ex: Na esquina da rua tal...',
+                  preffixIcon: Icon(Icons.description, color: Colors.yellow),
+                  maxLines: 3,
+                ),
+              ],
+            ),
           ),
         ),
       ),
