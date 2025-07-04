@@ -54,7 +54,7 @@ class _SelectDateTimeIconButtonWidgetState
   Widget build(BuildContext context) {
     return IconButton(
       onPressed: selectDateTime,
-      icon: const Icon(Icons.calendar_month),
+      icon: Icon(Icons.calendar_month, color: Colors.orange),
     );
   }
 }

@@ -8,6 +8,7 @@ class TextFormFieldWidget extends StatelessWidget {
   final String? hintText;
   final Widget? preffixIcon;
   final int? maxLines;
+  final bool? readOnly;
 
   const TextFormFieldWidget({
     super.key,
@@ -16,12 +17,14 @@ class TextFormFieldWidget extends StatelessWidget {
     this.hintText,
     this.preffixIcon,
     this.maxLines,
+    this.readOnly,
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
+      readOnly: readOnly ?? false,
       cursorColor: AppColors.whiteColor,
       maxLines: maxLines,
       style: TextStyle(color: AppColors.whiteColor),
